@@ -1,12 +1,10 @@
 pipeline {
-  agent any
-  
-  git('https://github.com/muditsrivastav16/simple-java-maven-app.git', 'master')
-  
+  agent any  
   stages {
     stage ('Build') {
       steps {
-        echo 'Build'
+        git('https://github.com/muditsrivastav16/simple-java-maven-app.git', 'master')
+        
       }
     }
     stage ('Test') {
